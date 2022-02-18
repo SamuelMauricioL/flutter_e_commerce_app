@@ -1,0 +1,38 @@
+name: e_commerce_app
+description: E-Commerce demo to Adviqo
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+
+dependencies:
+  bloc: ^8.0.2
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+
+  # https://pub.dev/packages/get_storage
+  get_storage: ^2.0.3
+  # https://pub.dev/packages/http
+  http: ^0.13.4
+  # https://pub.dev/packages/internet_connection_checker
+  connectivity_plus: ^2.2.0
+  # https://pub.dev/packages/oxidized
+  oxidized: ^5.2.0
+  # https://pub.dev/packages/equatable
+  equatable: ^2.0.3
+
+dev_dependencies:
+  bloc_test: ^9.0.2
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.2.0
+  very_good_analysis: ^2.4.0
+
+flutter:
+  uses-material-design: true
+  generate: true
