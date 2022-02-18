@@ -1,10 +1,11 @@
 import 'dart:async';
 import 'dart:developer';
 
+import 'package:e_commerce_app/core/network/network_checker.dart';
 import 'package:e_commerce_app/core/storage/storage.dart';
-import 'package:e_commerce_app/ui/products/data/products_local_data_source.dart';
-import 'package:e_commerce_app/ui/products/data/products_remote_data_source.dart';
-import 'package:e_commerce_app/ui/products/repositories/products_repository.dart';
+import 'package:e_commerce_app/ui/products/data/datasource/products_local_data_source.dart';
+import 'package:e_commerce_app/ui/products/data/datasource/products_remote_data_source.dart';
+import 'package:e_commerce_app/ui/products/data/repositories/products_repository.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -32,6 +33,9 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
       final storage = Storage();
       await storage.init();
 
+      // Network checker
+      final networkChecker = NetworkCheckerImpl();
+
       // Products
       final productsLocalDS = ProductsLocalDataSource(storage: storage);
       final productsRemoteDS = ProductsRemoteDataSource();
@@ -44,6 +48,7 @@ Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
                 create: (_) => ProductsRepositoryImpl(
                   localDatasource: productsLocalDS,
                   remoteDataSource: productsRemoteDS,
+                  networkChecker: networkChecker,
                 ),
               ),
             ],

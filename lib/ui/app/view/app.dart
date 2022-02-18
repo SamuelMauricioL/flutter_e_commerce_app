@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/l10n/l10n.dart';
-import 'package:e_commerce_app/products/view/view.dart';
+import 'package:e_commerce_app/ui/products/presentation/view/view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 

@@ -12,9 +12,3 @@ class UnhandledFailure extends Failure {}
 class ConnectionFailure extends Failure {}
 
 class ServerFailure extends Failure {}
-
-class WrongApiKeyFailure extends Failure {}
-
-class FreePlanExceededFailure extends Failure {}
-
-class EmptyFailure extends Failure {}

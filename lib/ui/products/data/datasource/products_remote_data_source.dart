@@ -1,7 +1,6 @@
-import 'package:e_commerce_app/ui/products/models/product_model.dart';
+import 'package:e_commerce_app/core/error/exceptions.dart';
+import 'package:e_commerce_app/ui/products/data/models/product_model.dart';
 import 'package:http/http.dart' as http;
-
-class BadRequestException implements Exception {}
 
 class ProductsRemoteDataSource {
   String apiUrl = 'https://fakestoreapi.com';
@@ -15,13 +14,16 @@ class ProductsRemoteDataSource {
           'Accept': 'application/json',
         },
       );
-      if (response.statusCode == 200) {
-        return productModelFromJson(response.body);
-      } else {
-        throw BadRequestException();
+      switch (response.statusCode) {
+        case 200:
+          return productModelFromJson(response.body);
+        case 400:
+          throw ServerException();
+        default:
+          throw ServerException();
       }
     } catch (e) {
-      throw BadRequestException();
+      throw ServerException();
     }
   }
 }
