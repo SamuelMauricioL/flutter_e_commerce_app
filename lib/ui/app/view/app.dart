@@ -1,7 +1,7 @@
 import 'package:e_commerce_app/l10n/l10n.dart';
 import 'package:e_commerce_app/ui/app/bloc/app_bloc.dart';
 import 'package:e_commerce_app/ui/app/routes/app_routes.dart';
-import 'package:e_commerce_app/ui/products/presentation/view/view.dart';
+import 'package:e_commerce_app/ui/shared/bottom_nav_bar/bottom_nav_bar.dart';
 import 'package:flow_builder/flow_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -37,9 +37,12 @@ class AppView extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: FlowBuilder(
-        state: context.select((AppBloc bloc) => bloc.state),
-        onGeneratePages: onGenerateAppViewPages,
+      home: Scaffold(
+        body: FlowBuilder(
+          state: context.select((AppBloc bloc) => bloc.state),
+          onGeneratePages: onGenerateAppViewPages,
+        ),
+        bottomNavigationBar: BottomNavBar(appBloc: context.read<AppBloc>()),
       ),
     );
   }

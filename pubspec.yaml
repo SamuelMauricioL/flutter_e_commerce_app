@@ -27,6 +27,8 @@ dependencies:
   equatable: ^2.0.3
   # https://pub.dev/packages/flow_builder
   flow_builder: ^0.0.6
+  # https://pub.dev/packages/iconsax
+  iconsax: ^0.0.8
 
 dev_dependencies:
   bloc_test: ^9.0.2
