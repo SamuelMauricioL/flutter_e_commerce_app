@@ -3,6 +3,6 @@ import 'package:e_commerce_app/ui/app/view/app.dart';
 
 void main() {
   bootstrap(
-    () => const App(),
+    () => const AppPage(),
   );
 }

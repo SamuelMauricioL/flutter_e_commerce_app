@@ -1,10 +1,28 @@
 part of 'app_bloc.dart';
 
-abstract class AppState extends Equatable {
-  const AppState();
-  
-  @override
-  List<Object> get props => [];
+enum AppPageStatus {
+  home,
+  traking,
+  profile,
 }
 
-class AppInitial extends AppState {}
+class AppState extends Equatable {
+  const AppState({
+    this.pageStatus = AppPageStatus.home,
+  });
+
+  final AppPageStatus pageStatus;
+
+  AppState copyWith({
+    AppPageStatus? pageStatus,
+  }) {
+    return AppState(
+      pageStatus: pageStatus ?? this.pageStatus,
+    );
+  }
+
+  @override
+  List<Object> get props => [
+        pageStatus,
+      ];
+}

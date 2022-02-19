@@ -25,6 +25,8 @@ dependencies:
   oxidized: ^5.2.0
   # https://pub.dev/packages/equatable
   equatable: ^2.0.3
+  # https://pub.dev/packages/flow_builder
+  flow_builder: ^0.0.6
 
 dev_dependencies:
   bloc_test: ^9.0.2

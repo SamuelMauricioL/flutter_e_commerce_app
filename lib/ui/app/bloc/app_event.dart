@@ -6,3 +6,11 @@ abstract class AppEvent extends Equatable {
   @override
   List<Object> get props => [];
 }
+
+class AppPageChangedTo extends AppEvent {
+  const AppPageChangedTo({
+    required this.page,
+  });
+
+  final AppPageStatus page;
+}

@@ -6,6 +6,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class ProductsPage extends StatelessWidget {
   const ProductsPage({Key? key}) : super(key: key);
 
+  static Page page() {
+    return const MaterialPage<void>(
+      child: ProductsPage(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
