@@ -1,8 +1,9 @@
 import 'package:e_commerce_app/ui/products/data/repositories/products_repository.dart';
 import 'package:e_commerce_app/ui/products/presentation/bloc/products_bloc.dart';
+import 'package:e_commerce_app/ui/products/presentation/view/producst_filter_list.dart';
 import 'package:e_commerce_app/ui/products/presentation/view/products_app_bar.dart';
 import 'package:e_commerce_app/ui/products/presentation/view/products_banner.dart';
-import 'package:e_commerce_app/ui/shared/custom_color.dart';
+import 'package:e_commerce_app/ui/products/presentation/view/products_filter_item.dart';
 import 'package:e_commerce_app/ui/shared/custom_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -44,21 +45,7 @@ class ProductsView extends StatelessWidget {
               const SizedBox(height: 20),
               Text('Popular Category', style: CustomStyle.textH1),
               const SizedBox(height: 20),
-              Card(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(9),
-                ),
-                color: CustomColor.primary,
-                child: Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.only(
-                    top: 20,
-                    bottom: 14,
-                    left: 14,
-                    right: 14,
-                  ),
-                ),
-              ),
+              const ProductsFilterList(),
             ],
           ),
         ),

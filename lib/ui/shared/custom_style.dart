@@ -23,6 +23,13 @@ class CustomStyle {
     color: CustomColor.black,
   );
 
+  static TextStyle textH2White = const TextStyle(
+    fontFamily: 'BwNista',
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: CustomColor.white,
+  );
+
   static TextStyle textH3 = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 18,
@@ -107,6 +114,19 @@ class CustomStyle {
     fontSize: 12,
     color: CustomColor.black,
     fontWeight: FontWeight.normal,
+  );
+  static TextStyle textH8Bold = const TextStyle(
+    fontFamily: 'BwNista',
+    fontSize: 12,
+    color: CustomColor.black,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle textH8BoldWhite = const TextStyle(
+    fontFamily: 'BwNista',
+    fontSize: 12,
+    color: CustomColor.white,
+    fontWeight: FontWeight.bold,
   );
 
   static TextStyle textH8Gray = const TextStyle(
