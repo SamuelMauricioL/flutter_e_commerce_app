@@ -9,6 +9,13 @@ class CustomStyle {
     color: CustomColor.black,
   );
 
+  static TextStyle textH1White = const TextStyle(
+    fontFamily: 'BwNista',
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    color: CustomColor.white,
+  );
+
   static TextStyle textH2 = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 20,
@@ -43,99 +50,72 @@ class CustomStyle {
     color: Colors.white,
   );
 
-  static TextStyle textH4Blue = const TextStyle(
-    fontFamily: 'BwNista',
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-    color: CustomColor.metalBlue,
-  );
-
-  static TextStyle textH4Dark = const TextStyle(
-    fontFamily: 'BwNista',
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-    color: CustomColor.black,
-  );
-
-  static TextStyle textRegularH4 = const TextStyle(
-    fontFamily: 'BwNista',
-    fontSize: 16,
-    fontWeight: FontWeight.normal,
-    color: CustomColor.black,
-  );
-
-  static TextStyle textH5DarkBlue = const TextStyle(
+  static TextStyle textH5 = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 15,
     fontWeight: FontWeight.bold,
     color: CustomColor.black,
   );
 
-  static TextStyle textH5Blue = const TextStyle(
+  static TextStyle textH6 = const TextStyle(
     fontFamily: 'BwNista',
-    fontSize: 15,
-    fontWeight: FontWeight.bold,
-    color: CustomColor.metalBlue,
+    fontSize: 14,
+    color: CustomColor.black,
   );
 
-  static TextStyle textBoldDarkBlue = const TextStyle(
+  static TextStyle textH6Gray = const TextStyle(
+    fontFamily: 'BwNista',
+    fontSize: 14,
+    color: CustomColor.gray,
+  );
+
+  static TextStyle textH6Bold = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 14,
     fontWeight: FontWeight.bold,
     color: CustomColor.black,
   );
 
-  static TextStyle textH7DarkBlue = const TextStyle(
-    fontFamily: 'BwNista',
-    fontSize: 13,
-    fontWeight: FontWeight.bold,
-    color: CustomColor.black,
-  );
-
-  static TextStyle textMediumDarkBlue = const TextStyle(
+  static TextStyle textH6Medium = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 14,
     fontWeight: FontWeight.w600,
     color: CustomColor.black,
   );
 
-  static TextStyle textDarkBlue = const TextStyle(
+  static TextStyle textH7 = const TextStyle(
     fontFamily: 'BwNista',
-    fontSize: 14,
+    fontSize: 13,
     color: CustomColor.black,
   );
 
-  static TextStyle textDark = const TextStyle(
+  static TextStyle textH7White = const TextStyle(
     fontFamily: 'BwNista',
-    fontSize: 14,
+    fontSize: 13,
+    color: CustomColor.white,
+  );
+
+  static TextStyle textH7Bold = const TextStyle(
+    fontFamily: 'BwNista',
+    fontSize: 13,
+    fontWeight: FontWeight.bold,
     color: CustomColor.black,
   );
 
-  static TextStyle textBody = const TextStyle(
-    fontFamily: 'BwNista',
-    fontSize: 14,
-    color: CustomColor.gray,
-  );
-
-  static TextStyle textSmallBody = const TextStyle(
-    fontFamily: 'BwNista',
-    fontSize: 12,
-    color: CustomColor.gray,
-  );
-
-  static TextStyle textSmallDarkBlue = const TextStyle(
+  static TextStyle textH8 = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 12,
     color: CustomColor.black,
     fontWeight: FontWeight.normal,
   );
-  static TextStyle textSmall = const TextStyle(
+
+  static TextStyle textH8Gray = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 12,
-    fontWeight: FontWeight.normal,
+    color: CustomColor.gray,
   );
 
-  static TextStyle textChip = const TextStyle(
+  static TextStyle textH9MediumGray = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 12,
     fontWeight: FontWeight.normal,
@@ -143,14 +123,14 @@ class CustomStyle {
     height: 1.2,
   );
 
-  static TextStyle textSmallDark = const TextStyle(
+  static TextStyle textH9 = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 12,
     color: CustomColor.black,
     fontWeight: FontWeight.normal,
   );
 
-  static TextStyle textTinyDarkBlue = const TextStyle(
+  static TextStyle textH10 = const TextStyle(
     fontFamily: 'BwNista',
     fontSize: 10,
     color: CustomColor.black,
@@ -179,36 +159,46 @@ class CustomStyle {
       height: 1.4,
     ),
     primary: CustomColor.primary,
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(6)),
-    ),
     padding: const EdgeInsets.all(2),
     backgroundColor: CustomColor.primaryLight,
-  );
-
-  static ButtonStyle buttonFilterActive = TextButton.styleFrom(
-    textStyle: const TextStyle(
-      fontSize: 12,
-      fontWeight: FontWeight.bold,
-      fontFamily: 'BwNista',
-      height: 1.4,
-    ),
-    primary: Colors.white,
     shape: const RoundedRectangleBorder(
       borderRadius: BorderRadius.all(Radius.circular(6)),
     ),
+  );
+
+  static ButtonStyle buttonStyleActive = TextButton.styleFrom(
+    textStyle: textH8,
+    primary: Colors.white,
     padding: const EdgeInsets.all(2),
     backgroundColor: CustomColor.primary,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(6)),
+    ),
+  );
+
+  static ButtonStyle buttonStyleDeactive = TextButton.styleFrom(
+    textStyle: textH8Gray,
+    primary: Colors.white,
+    padding: const EdgeInsets.all(2),
+    backgroundColor: CustomColor.primaryLight,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(6)),
+    ),
+  );
+
+  static ButtonStyle buttonStyleWhite = TextButton.styleFrom(
+    textStyle: textH8,
+    primary: CustomColor.black,
+    padding: const EdgeInsets.all(2),
+    backgroundColor: CustomColor.white,
+    shape: const RoundedRectangleBorder(
+      borderRadius: BorderRadius.all(Radius.circular(6)),
+    ),
   );
 
   static BoxDecoration boxShadow = const BoxDecoration(
     color: Colors.white,
-    borderRadius: BorderRadius.only(
-      topLeft: Radius.circular(10),
-      topRight: Radius.circular(10),
-      bottomLeft: Radius.circular(10),
-      bottomRight: Radius.circular(10),
-    ),
+    borderRadius: BorderRadius.all(Radius.circular(10)),
     boxShadow: [
       BoxShadow(
         color: CustomColor.shadowBlue,
@@ -219,34 +209,22 @@ class CustomStyle {
     ],
   );
 
-  static BoxDecoration boxLightGreen = const BoxDecoration(
+  static BorderRadius borderRadius =
+      const BorderRadius.all(Radius.circular(10));
+
+  static BoxDecoration boxLightGreen = BoxDecoration(
     color: CustomColor.primaryLight,
-    borderRadius: BorderRadius.only(
-      topLeft: Radius.circular(10),
-      topRight: Radius.circular(10),
-      bottomLeft: Radius.circular(10),
-      bottomRight: Radius.circular(10),
-    ),
+    borderRadius: borderRadius,
   );
 
-  static BoxDecoration boxGreen = const BoxDecoration(
+  static BoxDecoration boxGreen = BoxDecoration(
     color: CustomColor.primary,
-    borderRadius: BorderRadius.only(
-      topLeft: Radius.circular(10),
-      topRight: Radius.circular(10),
-      bottomLeft: Radius.circular(10),
-      bottomRight: Radius.circular(10),
-    ),
+    borderRadius: borderRadius,
   );
 
-  static BoxDecoration boxRed = const BoxDecoration(
+  static BoxDecoration boxRed = BoxDecoration(
     color: CustomColor.red,
-    borderRadius: BorderRadius.only(
-      topLeft: Radius.circular(10),
-      topRight: Radius.circular(10),
-      bottomLeft: Radius.circular(10),
-      bottomRight: Radius.circular(10),
-    ),
+    borderRadius: borderRadius,
   );
 
   static BoxDecoration borderBottom = const BoxDecoration(

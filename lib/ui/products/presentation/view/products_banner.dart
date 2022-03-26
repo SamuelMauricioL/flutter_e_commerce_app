@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/ui/shared/custom_color.dart';
+import 'package:e_commerce_app/ui/shared/custom_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -27,37 +28,24 @@ class ProductsBanner extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Music and No more',
-                  style: TextStyle(
-                    color: CustomColor.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: CustomStyle.textH1White,
                 ),
                 const SizedBox(height: 20),
-                const Text(
+                Text(
                   '10% off for One of the best\nheadphones in the world',
-                  style: TextStyle(
-                    color: CustomColor.white,
-                    fontSize: 12,
-                  ),
+                  style: CustomStyle.textH7,
                 ),
                 const SizedBox(height: 15),
                 ElevatedButton(
-                  style: TextButton.styleFrom(
-                    primary: CustomColor.black,
-                    backgroundColor: CustomColor.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(14),
-                    ),
-                    minimumSize: const Size(0, 45),
-                  ),
+                  style: CustomStyle.buttonStyleWhite,
                   onPressed: () {},
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      const Text('Order Now'),
+                      const SizedBox(width: 10),
+                      Text('Order Now', style: CustomStyle.textH7),
                       const SizedBox(width: 4),
                       SvgPicture.asset(
                         'assets/icons/arrow_right.svg',
@@ -65,6 +53,7 @@ class ProductsBanner extends StatelessWidget {
                         height: 25,
                         width: 25,
                       ),
+                      const SizedBox(width: 2),
                     ],
                   ),
                 ),

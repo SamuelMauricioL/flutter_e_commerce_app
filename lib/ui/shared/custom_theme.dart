@@ -1,4 +1,5 @@
 import 'package:e_commerce_app/ui/shared/custom_color.dart';
+import 'package:e_commerce_app/ui/shared/custom_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -29,12 +30,7 @@ class CustomTheme {
     scaffoldBackgroundColor: Colors.white,
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: TextButton.styleFrom(
-        textStyle: const TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.w600,
-          fontFamily: 'BwNista',
-          height: 1,
-        ),
+        textStyle: CustomStyle.textH6Medium,
         primary: CustomColor.black,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(6)),
@@ -50,21 +46,9 @@ class CustomTheme {
         textStyle: MaterialStateProperty.resolveWith<TextStyle?>(
             (Set<MaterialState> states) {
           if (states.contains(MaterialState.disabled)) {
-            return const TextStyle(
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              fontFamily: 'BwNista',
-              height: 1,
-              color: Colors.white,
-            );
+            return CustomStyle.textH6Medium;
           }
-          return const TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 14,
-            fontFamily: 'BwNista',
-            height: 1,
-            color: Colors.white,
-          );
+          return CustomStyle.textH6Medium;
         }),
         overlayColor: MaterialStateColor.resolveWith(
           (states) => Colors.white.withOpacity(.12),
@@ -93,14 +77,6 @@ class CustomTheme {
         ),
       ),
     ),
-    textTheme: const TextTheme(
-      bodyText2: TextStyle(
-        fontSize: 14,
-        height: 1.6,
-        fontWeight: FontWeight.normal,
-        color: CustomColor.gray,
-        fontFamily: 'BwNista',
-      ),
-    ),
+    textTheme: TextTheme(bodyText2: CustomStyle.textH6Medium),
   );
 }

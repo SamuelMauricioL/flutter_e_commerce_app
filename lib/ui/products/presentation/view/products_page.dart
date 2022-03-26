@@ -3,6 +3,7 @@ import 'package:e_commerce_app/ui/products/presentation/bloc/products_bloc.dart'
 import 'package:e_commerce_app/ui/products/presentation/view/products_app_bar.dart';
 import 'package:e_commerce_app/ui/products/presentation/view/products_banner.dart';
 import 'package:e_commerce_app/ui/shared/custom_color.dart';
+import 'package:e_commerce_app/ui/shared/custom_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -41,14 +42,7 @@ class ProductsView extends StatelessWidget {
               const ProductsAppBar(),
               const ProductsBanner(),
               const SizedBox(height: 20),
-              const Text(
-                'Popular Category',
-                style: TextStyle(
-                  color: CustomColor.black,
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
+              Text('Popular Category', style: CustomStyle.textH1),
               const SizedBox(height: 20),
               Card(
                 shape: RoundedRectangleBorder(
