@@ -47,3 +47,14 @@ flutter:
     - assets/icons/arrow_right.svg
     - assets/icons/search.svg
     - assets/icons/notification.svg
+
+  fonts:
+    - family: BwNista
+      fonts:
+        - asset: assets/font/BwNistaGrotesk-Regular.ttf
+        - asset: assets/font/BwNistaGrotesk-Black.ttf
+          weight: 900
+        - asset: assets/font/BwNistaGrotesk-Bold.ttf
+          weight: 700
+        - asset: assets/font/BwNistaGrotesk-Medium.ttf
+          weight: 600

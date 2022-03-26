@@ -44,7 +44,7 @@ class ProductsView extends StatelessWidget {
               const Text(
                 'Popular Category',
                 style: TextStyle(
-                  color: CustomColor.kBlack,
+                  color: CustomColor.black,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -54,7 +54,7 @@ class ProductsView extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(9),
                 ),
-                color: CustomColor.kPrimaryColor,
+                color: CustomColor.primary,
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.only(
