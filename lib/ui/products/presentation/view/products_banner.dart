@@ -15,7 +15,7 @@ class ProductsBanner extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          color: CustomColor.kPrimaryColor,
+          color: CustomColor.primary,
           child: Container(
             width: double.infinity,
             padding: const EdgeInsets.only(
@@ -30,7 +30,7 @@ class ProductsBanner extends StatelessWidget {
                 const Text(
                   'Music and No more',
                   style: TextStyle(
-                    color: CustomColor.kWhite,
+                    color: CustomColor.white,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
@@ -39,15 +39,15 @@ class ProductsBanner extends StatelessWidget {
                 const Text(
                   '10% off for One of the best\nheadphones in the world',
                   style: TextStyle(
-                    color: CustomColor.kWhite,
+                    color: CustomColor.white,
                     fontSize: 12,
                   ),
                 ),
                 const SizedBox(height: 15),
                 ElevatedButton(
                   style: TextButton.styleFrom(
-                    primary: CustomColor.kBlack,
-                    backgroundColor: CustomColor.kWhite,
+                    primary: CustomColor.black,
+                    backgroundColor: CustomColor.white,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14),
                     ),
@@ -61,7 +61,7 @@ class ProductsBanner extends StatelessWidget {
                       const SizedBox(width: 4),
                       SvgPicture.asset(
                         'assets/icons/arrow_right.svg',
-                        color: CustomColor.kBlack,
+                        color: CustomColor.black,
                         height: 25,
                         width: 25,
                       ),

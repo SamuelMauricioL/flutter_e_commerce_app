@@ -50,7 +50,7 @@ class BottomNavBar extends StatelessWidget {
           items: _getItems(),
           currentIndex: _getCurrentIndex(),
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: CustomColor.kPrimaryColor,
+          selectedItemColor: CustomColor.primary,
           unselectedItemColor: Colors.grey.shade400,
           onTap: (index) {
             appBloc.add(
