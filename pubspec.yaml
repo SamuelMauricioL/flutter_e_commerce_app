@@ -29,6 +29,8 @@ dependencies:
   flow_builder: ^0.0.6
   # https://pub.dev/packages/iconsax
   iconsax: ^0.0.8
+  # https://pub.dev/packages/flutter_svg
+  flutter_svg: ^1.0.3
 
 dev_dependencies:
   bloc_test: ^9.0.2
@@ -40,3 +42,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/images/thumbnails_black.png
+    - assets/icons/arrow_right.svg
+    - assets/icons/search.svg
+    - assets/icons/notification.svg

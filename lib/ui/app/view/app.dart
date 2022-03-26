@@ -38,6 +38,7 @@ class AppView extends StatelessWidget {
       ],
       supportedLocales: AppLocalizations.supportedLocales,
       home: Scaffold(
+        // appBar: AppBar(title: const Text('asd')),
         body: FlowBuilder(
           state: context.select((AppBloc bloc) => bloc.state),
           onGeneratePages: onGenerateAppViewPages,
