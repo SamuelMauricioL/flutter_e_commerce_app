@@ -2,10 +2,9 @@ import 'package:e_commerce_app/ui/products/data/repositories/products_repository
 import 'package:e_commerce_app/ui/products/presentation/bloc/products_bloc.dart';
 import 'package:e_commerce_app/ui/products/presentation/view/products_app_bar.dart';
 import 'package:e_commerce_app/ui/products/presentation/view/products_banner.dart';
-import 'package:e_commerce_app/ui/shared/constants.dart';
+import 'package:e_commerce_app/ui/shared/custom_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class ProductsPage extends StatelessWidget {
   const ProductsPage({Key? key}) : super(key: key);
@@ -33,7 +32,6 @@ class ProductsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(title: Text('asd')),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
@@ -46,7 +44,7 @@ class ProductsView extends StatelessWidget {
               const Text(
                 'Popular Category',
                 style: TextStyle(
-                  color: kBlack,
+                  color: CustomColor.kBlack,
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
@@ -56,7 +54,7 @@ class ProductsView extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(9),
                 ),
-                color: kPrimaryColor,
+                color: CustomColor.kPrimaryColor,
                 child: Container(
                   width: double.infinity,
                   padding: const EdgeInsets.only(

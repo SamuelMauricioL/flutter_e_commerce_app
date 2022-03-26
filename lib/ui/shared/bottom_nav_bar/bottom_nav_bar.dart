@@ -1,5 +1,5 @@
 import 'package:e_commerce_app/ui/app/bloc/app_bloc.dart';
-import 'package:e_commerce_app/ui/shared/constants.dart';
+import 'package:e_commerce_app/ui/shared/custom_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:iconsax/iconsax.dart';
@@ -50,7 +50,7 @@ class BottomNavBar extends StatelessWidget {
           items: _getItems(),
           currentIndex: _getCurrentIndex(),
           type: BottomNavigationBarType.fixed,
-          selectedItemColor: kPrimaryColor,
+          selectedItemColor: CustomColor.kPrimaryColor,
           unselectedItemColor: Colors.grey.shade400,
           onTap: (index) {
             appBloc.add(

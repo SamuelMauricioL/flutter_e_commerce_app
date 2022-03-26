@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/ui/shared/constants.dart';
+import 'package:e_commerce_app/ui/shared/custom_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -15,7 +15,7 @@ class ProductsBanner extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          color: kPrimaryColor,
+          color: CustomColor.kPrimaryColor,
           child: Container(
             width: double.infinity,
             padding: const EdgeInsets.only(
@@ -30,7 +30,7 @@ class ProductsBanner extends StatelessWidget {
                 const Text(
                   'Music and No more',
                   style: TextStyle(
-                    color: kWhite,
+                    color: CustomColor.kWhite,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
@@ -39,15 +39,15 @@ class ProductsBanner extends StatelessWidget {
                 const Text(
                   '10% off for One of the best\nheadphones in the world',
                   style: TextStyle(
-                    color: kWhite,
+                    color: CustomColor.kWhite,
                     fontSize: 12,
                   ),
                 ),
                 const SizedBox(height: 15),
                 ElevatedButton(
                   style: TextButton.styleFrom(
-                    primary: kBlack,
-                    backgroundColor: kWhite,
+                    primary: CustomColor.kBlack,
+                    backgroundColor: CustomColor.kWhite,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(14),
                     ),
@@ -61,7 +61,7 @@ class ProductsBanner extends StatelessWidget {
                       const SizedBox(width: 4),
                       SvgPicture.asset(
                         'assets/icons/arrow_right.svg',
-                        color: kBlack,
+                        color: CustomColor.kBlack,
                         height: 25,
                         width: 25,
                       ),
