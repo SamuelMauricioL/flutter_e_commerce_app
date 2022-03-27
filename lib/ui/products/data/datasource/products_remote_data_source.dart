@@ -1,3 +1,6 @@
+import 'dart:convert';
+import 'dart:developer';
+
 import 'package:e_commerce_app/core/error/exceptions.dart';
 import 'package:e_commerce_app/ui/products/data/models/product_model.dart';
 import 'package:http/http.dart' as http;
@@ -14,8 +17,10 @@ class ProductsRemoteDataSource {
           'Accept': 'application/json',
         },
       );
+      log(response.statusCode.toString());
       switch (response.statusCode) {
         case 200:
+          // final jsonn = json.decode(response.body) as List;
           return productModelFromJson(response.body);
         case 400:
           throw ServerException();

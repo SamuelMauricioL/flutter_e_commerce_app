@@ -35,7 +35,7 @@ class ProductsBanner extends StatelessWidget {
                 const SizedBox(height: 20),
                 Text(
                   '10% off for One of the best\nheadphones in the world',
-                  style: CustomStyle.textH7,
+                  style: CustomStyle.textH7White,
                 ),
                 const SizedBox(height: 15),
                 ElevatedButton(

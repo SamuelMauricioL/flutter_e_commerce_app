@@ -1,11 +1,11 @@
 import 'dart:convert';
 
 List<ProductModel> productModelFromJson(String str) => List<ProductModel>.from(
-      json.decode(str).map(
-        (Map<String, dynamic> x) {
+      (json.decode(str) as List<dynamic>).map(
+        (dynamic x) {
           return ProductModel.fromJson(x);
         },
-      ) as List<ProductModel>,
+      ).toList(),
     );
 
 String productModelToJson(List<ProductModel> data) => json.encode(
@@ -25,10 +25,10 @@ class ProductModel {
     required this.rating,
   });
 
-  factory ProductModel.fromJson(Map<String, dynamic> json) => ProductModel(
+  factory ProductModel.fromJson(dynamic json) => ProductModel(
         id: json['id'] as int,
         title: json['title'] as String,
-        price: json['price'] as double,
+        price: fromIntToDouble(json['price']),
         description: json['description'] as String,
         category: json['category'] as String,
         image: json['image'] as String,
@@ -78,7 +78,7 @@ class Rating {
   });
 
   factory Rating.fromJson(Map<String, dynamic> json) => Rating(
-        rate: json['rate'] as double,
+        rate: fromIntToDouble(json['rate']),
         count: json['count'] as int,
       );
 
@@ -89,4 +89,11 @@ class Rating {
         'rate': rate,
         'count': count,
       };
+}
+
+double fromIntToDouble(dynamic value) {
+  if (value is int) {
+    return value.toDouble();
+  }
+  return value as double;
 }
