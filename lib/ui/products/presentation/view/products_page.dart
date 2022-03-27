@@ -3,6 +3,7 @@ import 'package:e_commerce_app/ui/products/presentation/bloc/products_bloc.dart'
 import 'package:e_commerce_app/ui/products/presentation/view/producst_filter_list.dart';
 import 'package:e_commerce_app/ui/products/presentation/view/products_app_bar.dart';
 import 'package:e_commerce_app/ui/products/presentation/view/products_banner.dart';
+import 'package:e_commerce_app/ui/products/presentation/view/products_list.dart';
 import 'package:e_commerce_app/ui/shared/custom_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -50,12 +51,7 @@ class ProductsView extends StatelessWidget {
                 child: BlocBuilder<ProductsBloc, ProductsState>(
                   builder: (_, state) {
                     if (state is ProductsLoaded) {
-                      return ListView.builder(
-                        itemCount: state.products.length,
-                        itemBuilder: (_, i) {
-                          return Text(state.products[i].title);
-                        },
-                      );
+                      return ProductsList(products: state.products);
                     }
                     if (state is ProductsError) {
                       return Text(state.message);

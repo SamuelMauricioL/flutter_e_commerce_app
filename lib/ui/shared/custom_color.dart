@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomColor {
-  static const Color primary = Color.fromARGB(255, 240, 107, 129);
-  static const Color primaryLight = Color.fromRGBO(229, 70, 96, 1);
+  static const Color primary = Color.fromRGBO(229, 70, 96, 1);
+  static const Color primaryLight = Color.fromARGB(255, 240, 107, 129);
   static const Color secondary = Color(0xFFEB7B64);
   static const Color white = Colors.white;
   static const Color black = Color.fromARGB(254, 0, 0, 0);

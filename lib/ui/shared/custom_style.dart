@@ -217,7 +217,7 @@ class CustomStyle {
   );
 
   static BoxDecoration boxShadow = const BoxDecoration(
-    color: Colors.white,
+    color: CustomColor.primaryLight,
     borderRadius: BorderRadius.all(Radius.circular(10)),
     boxShadow: [
       BoxShadow(
