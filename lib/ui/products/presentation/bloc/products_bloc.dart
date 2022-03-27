@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:e_commerce_app/ui/products/data/models/product_model.dart';
 import 'package:e_commerce_app/ui/products/data/repositories/products_repository.dart';
+import 'package:e_commerce_app/ui/products/models/product_model.dart';
 import 'package:equatable/equatable.dart';
 
 part 'products_event.dart';

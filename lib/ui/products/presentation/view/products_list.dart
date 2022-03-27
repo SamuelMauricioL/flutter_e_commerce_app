@@ -1,4 +1,4 @@
-import 'package:e_commerce_app/ui/products/data/models/product_model.dart';
+import 'package:e_commerce_app/ui/products/models/product_model.dart';
 import 'package:e_commerce_app/ui/shared/custom_color.dart';
 import 'package:e_commerce_app/ui/shared/custom_style.dart';
 import 'package:flutter/material.dart';

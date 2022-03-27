@@ -1,8 +1,7 @@
-import 'dart:convert';
 import 'dart:developer';
 
 import 'package:e_commerce_app/core/error/exceptions.dart';
-import 'package:e_commerce_app/ui/products/data/models/product_model.dart';
+import 'package:e_commerce_app/ui/products/models/product_model.dart';
 import 'package:http/http.dart' as http;
 
 class ProductsRemoteDataSource {
